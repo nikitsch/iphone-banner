@@ -14,7 +14,6 @@ import posterSecond3xWebp from '../shared/assets/posters/poster-2@3x.webp'
 import posterThird1xWebp from '../shared/assets/posters/poster-3.webp'
 import posterThird2xWebp from '../shared/assets/posters/poster-3@2x.webp'
 import posterThird3xWebp from '../shared/assets/posters/poster-3@3x.webp'
-// import { setupCounter } from '../counter.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <div class="common-wrapper">
@@ -71,7 +70,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       </section>
 
       <section class="interaction">
-        <button class="first-option-btn btn active option-btn" data-href="https://apple.com/">
+        <button class="first-option-btn btn active option-btn" id="option-1" data-href="https://apple.com/">
           <div class="left-btn-align">
             <p class="btn-title">YEARLY ACCESS</p>
             <p class="btn-subtitle">Just $39.99 per year</p>
@@ -81,7 +80,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           </div>
           <span class="btn-note">BEST OFFER</span>
         </button>
-        <button class="second-option-btn btn option-btn" data-href="https://google.com/">
+        <button class="second-option-btn btn option-btn" id="option-2" data-href="https://google.com/">
           <div class="left-btn-align">
             <p class="btn-title">WEEKLY ACCESS</p>
           </div>
@@ -89,7 +88,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
             <p class="btn-subtitle">$6.99 <br/>per week</p>
           </div>
         </button>
-        <button class="submit-btn btn">Continue</button>
+        <button class="submit-btn btn" id="submit">Continue</button>
       </section>
   </main>
 
@@ -111,5 +110,3 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </footer>
 </div>
 `
-
-// setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
