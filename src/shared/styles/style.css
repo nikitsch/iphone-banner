@@ -57,6 +57,24 @@ body {
   align-items: center;
 }
 
+.bar-13 {
+  height: 4.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-time {
+  font-family: var(--sf-sem-family);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  margin-left: 3.5rem;
+}
+.bar-13 .bar-right {
+  margin-right: 1.5rem;
+  gap: 0.4rem;
+}
+
 .bar-8 {
   height: 2.1rem;
   display: flex;
@@ -100,6 +118,8 @@ body {
   display: flex;
   justify-content: right;
   align-items: center;
+}
+.bar-8 .bar-right {
   gap: 0.2rem;
 }
 
@@ -269,6 +289,16 @@ body {
   color: #ffffff;
 }
 
+.swipe-bar {
+  margin: auto;
+  margin-top: 1.7rem;
+  bottom: 2rem;
+  border-radius: 10rem;
+  width: 13.4rem;
+  height: 0.5rem;
+  background-color: #ffffff;
+}
+
 
 
 @media (width: 320px) and (height: 568px) and (orientation: portrait) {
@@ -277,10 +307,12 @@ body {
   body {
     font-size: calc(10px * 0.85);
   }
+  .swipe-bar,
   .bar-13 { display: none }
 }
 @media (width: 375px) and (height: 667px) and (orientation: portrait) {
   /*! iPhone 8 */
+  .swipe-bar,
   .bar-13 {
     display: none;
   }
@@ -291,6 +323,7 @@ body {
   body {
     font-size: calc(10px * 1.104);
   }
+  .swipe-bar,
   .bar-13 {
     display: none;
   }
@@ -298,20 +331,42 @@ body {
 
 
 
+@media (width: 375px) and (height: 812px) and (orientation: portrait),
+  (width: 390px) and (height: 844px) and (orientation: portrait),
+  (width: 428px) and (height: 926px) and (orientation: portrait),
+  (width: 430px) and (height: 932px) and (orientation: portrait) {
+/* @media (width: 430px) and (height: 932px) and (orientation: portrait) { */
+  /* ! iPhone 13 */
+  .bar-8 {
+    display: none;
+  }
+  .main {
+    margin-top: 2.8rem;
+  }
+  .main-title {
+    margin-top: 15.7rem;
+  }
+  .poster-gallery {
+    margin-top: 4rem;
+  }
+  .interaction {
+    margin-top: 4.9rem;
+  }
+  .right-btn-align {
+    margin-left: 0.2rem;
+  }
+  .submit-btn {
+    margin-top: 0.8rem;
+  }
+  .footer {
+    margin-top: 4.4rem;
+  }
+}
 @media (width: 375px) and (height: 812px) and (orientation: portrait) {
   /* ! iPhone 11 Pro */
   html,
   body {
-    font-size: calc(10px * 0.93);
-  }
-  .bar-8 {
-    display: none;
-  }
-}
-@media (width: 390px) and (height: 844px) and (orientation: portrait) {
-  /* ! iPhone 13 */
-  .bar-8 {
-    display: none;
+    font-size: calc(10px * 0.96);
   }
 }
 @media (width: 428px) and (height: 926px) and (orientation: portrait) {
@@ -320,17 +375,11 @@ body {
   body {
     font-size: calc(10px * 1.097);
   }
-  .bar-8 {
-    display: none;
-  }
 }
 @media (width: 430px) and (height: 932px) and (orientation: portrait) {
   /* ! iPhone 14 Pro Max */
   html,
   body {
     font-size: calc(10px * 1.103);
-  }
-  .bar-8 {
-    display: none;
   }
 }

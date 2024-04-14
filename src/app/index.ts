@@ -21,7 +21,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <header class="header">
     <div class="system-bar bar-13">
       <div class="bar-left">
-        <span>9:41</span>
+        <span class="left-time">9:41</span>
       </div>
       <div class="bar-right">
         <img src="${mobileSignalIcon}" alt="mobile-signal">
@@ -107,6 +107,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         </li>
       </ul>
     </nav>
+    <div class="swipe-bar" />
   </footer>
 </div>
 `
