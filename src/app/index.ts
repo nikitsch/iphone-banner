@@ -1,93 +1,114 @@
 import '../shared/styles/style.css'
+import '../shared/styles/reset.css'
 import batteryIcon from '../shared/assets/svg/battery.svg'
 import bluetoothIcon from '../shared/assets/svg/bluetooth.svg'
 import crossIcon from '../shared/assets/svg/cross.svg'
 import mobileSignalIcon from '../shared/assets/svg/mobile-signal.svg'
 import wifiIcon from '../shared/assets/svg/wifi.svg'
-import posterFirst from '../shared/assets/posters/f1.jpg'
+import posterFirst1xWebp from '../shared/assets/posters/poster-1.webp'
+import posterFirst2xWebp from '../shared/assets/posters/poster-1@2x.webp'
+import posterFirst3xWebp from '../shared/assets/posters/poster-1@3x.webp'
+import posterSecond1xWebp from '../shared/assets/posters/poster-2.webp'
+import posterSecond2xWebp from '../shared/assets/posters/poster-2@2x.webp'
+import posterSecond3xWebp from '../shared/assets/posters/poster-2@3x.webp'
+import posterThird1xWebp from '../shared/assets/posters/poster-3.webp'
+import posterThird2xWebp from '../shared/assets/posters/poster-3@2x.webp'
+import posterThird3xWebp from '../shared/assets/posters/poster-3@3x.webp'
 // import { setupCounter } from '../counter.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <header class="header__container">
-    <div class="header__system-bar header__system-bar_size-13">
-      <div class="system-bar_left">
+<div class="common-wrapper">
+  <header class="header">
+    <div class="system-bar bar-13">
+      <div class="bar-left">
         <span>9:41</span>
       </div>
-      <div class="system-bar_right">
-        <img src="${mobileSignalIcon}" alt="mobile-signal" width="17.68" height="10.67">
-        <img src="${wifiIcon}" alt="wifi" width="15.88" height="10.97">
-        <img src="${batteryIcon}" alt="battery" width="25.48" height="10.50">
+      <div class="bar-right">
+        <img src="${mobileSignalIcon}" alt="mobile-signal">
+        <img src="${wifiIcon}" alt="wifi">
+        <img src="${batteryIcon}" alt="battery">
       </div>
     </div>
-    <div class="header__system-bar header__system-bar_size-8">
-      <div class="system-bar_left">
-        <img src="${mobileSignalIcon}" alt="mobile-signal" width="16.50" height="10.00">
-        <p>Sketch</p>
-        <img src="${wifiIcon}" alt="wifi" width="14.34" height="10.00">
-      </div>
-      <div class="system-bar_center">
-        <span>9:41 AM</span>
-      </div>
-      <div class="system-bar_right">
-        <img src="${bluetoothIcon}" alt="bluetooth" width="6.00" height="10.00">
-        <span>100%</span>
-        <img src="${batteryIcon}" alt="battery" width="27.00" height="12.00">
+    <div class="bar-8">
+      <div class="system-bar bar-8-wrapper">
+        <div class="bar-left">
+          <img class="svg-8-ms" src="${mobileSignalIcon}" alt="mobile-signal">
+          <span class="sketch-8">Sketch</span>
+          <img class="svg-8-wf" src="${wifiIcon}" alt="wifi">
+        </div>
+        <div class="bar-center">
+          <span>9:41 AM</span>
+        </div>
+        <div class="bar-right">
+          <img class="svg-8-bt" src="${bluetoothIcon}" alt="bluetooth">
+          <span class="percent-8">100%</span>
+          <img class="svg-8-ba" src="${batteryIcon}" alt="battery">
+        </div>
       </div>
     </div>
   </header>
 
-  <main class="main__container">
-      <a href="#" class="main__container--cross">
-        <img src="${crossIcon}" alt="cross" width="12.00" height="12.00">
+  <main class="main container">
+      <a href="#" class="closing-action">
+        <img src="${crossIcon}" alt="cross">
       </a>
 
-      <h1 class="main__container--title" id="title">Get Unlimited <br>Access</h1>
+      <h1 class="main-title">Get Unlimited <br>Access</h1>
       
-      <div class="main__container--gallery">
-        <div class="gallery_poster-1">
-          <img src="${posterFirst}" alt="poster-1">
-          <h3 class="poster--title">Exclusive Styles</h3>
-        </div>
-        <div class="gallery_poster-2">
-          <img src="${posterFirst}" alt="poster-2">
-          <h3 class="poster--title">Exclusive Styles</h3>
-        </div>
-        <div class="gallery_poster-3">
-          <img src="${posterFirst}" alt="poster-3">
-          <h3 class="poster--title">Magic Avatars With 20% Off</h3>
-        </div>
-      </div>
+      <section class="poster-gallery">
+        <article class="poster">
+          <img src="${posterFirst1xWebp}" srcset="${posterFirst2xWebp} 2x, ${posterFirst3xWebp} 3x" alt="poster-1">
+          <h3 class="poster-title">Unlimited Art <br>Creation</h3>
+          </article>
+          <article class="poster">
+          <img src="${posterSecond1xWebp}" srcset="${posterSecond2xWebp} 2x, ${posterSecond3xWebp} 3x" alt="poster-2">
+          <h3 class="poster-title">Exclusive Styles</h3>
+        </article>
+        <article class="poster">
+          <img src="${posterThird1xWebp}" srcset="${posterThird2xWebp} 2x, ${posterThird3xWebp} 3x" alt="poster-3">
+          <h3 class="poster-title">Magic Avatars With 20% Off</h3>
+        </article>
+      </section>
 
-      <div class="main__container--interaction">
-        <button class="interaction_btn-1 active" data-href="https://apple.com/">
-          <p class="btn__title td-1">YEARLY ACCESS</p>
-          <p class="btn__subtitle td-1">Just $39.99 per year</p>
-          <p class="btn__subtitle td-2">$0.48 <br/>per week</p>
-          <span class="btn_note">BEST OFFER</span>
+      <section class="interaction">
+        <button class="first-option-btn btn active option-btn" data-href="https://apple.com/">
+          <div class="left-btn-align">
+            <p class="btn-title">YEARLY ACCESS</p>
+            <p class="btn-subtitle">Just $39.99 per year</p>
+          </div>
+          <div class="right-btn-align">
+            <p class="btn-subtitle">$0.48 <br/>per week</p>
+          </div>
+          <span class="btn-note">BEST OFFER</span>
         </button>
-        <button class="interaction_btn-2" data-href="https://google.com/">
-          <p class="btn__title td-1">WEEKLY ACCESS</p>
-          <p class="btn__subtitle td-2">$6.99 <br/>per week</p>
+        <button class="second-option-btn btn option-btn" data-href="https://google.com/">
+          <div class="left-btn-align">
+            <p class="btn-title">WEEKLY ACCESS</p>
+          </div>
+          <div class="right-btn-align">
+            <p class="btn-subtitle">$6.99 <br/>per week</p>
+          </div>
         </button>
-        <button class="interaction_btn-submit" id="continue">Continue</button>
-      </div>
+        <button class="submit-btn btn">Continue</button>
+      </section>
   </main>
 
-  <footer class="footer__container">
-    <nav class="footer__nav">
-      <ul class="footer__nav--ul">
-        <li class="footer__ul--li">
-          <a href="#" class="footer__li--link">Terms of Use</a>
+  <footer class="footer">
+    <nav class="navigation">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Terms of Use</a>
         </li>
-        <li class="footer__ul--li">
-          <a href="#" class="footer__li--link">Privacy Policy</a>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Privacy Policy</a>
         </li>
-        <li class="footer__ul--li">
-          <a href="#" class="footer__li--link">Restore</a>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Restore</a>
         </li>
       </ul>
     </nav>
   </footer>
+</div>
 `
 
 // setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
