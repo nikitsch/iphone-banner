@@ -15,14 +15,30 @@ const loadLanguage = async (lang: LanguagesType) => {
 
 async function applyTranslations(language: LanguagesType) {
   const translation = await loadLanguage(language);
+  const fontSizeMap = {
+    'de': { '.main-title': '2.69rem', '.btn-note': '1rem', '.nav-link': '0.9rem' },
+    'es': { '.nav-link': '1.2rem' },
+    'fr': { '.main-title': '3.7rem', '.btn-note': '1rem', '.btn-title': '1.5rem', '.btn-subtitle': '1.5rem', '.nav-link': '1rem' },
+    'pt': { '.btn-note': '1rem', '.nav-link': '1.2rem' }
+  };
+
   document.querySelectorAll('[data-i18n]').forEach(element => {
     const key = element.getAttribute('data-i18n');
     if (key && translation[key as keyof typeof translation]) {
-      const str = translation[key as keyof typeof translation]
-      const price = element.getAttribute('data-price')
+      const str = translation[key as keyof typeof translation];
+      const price = element.getAttribute('data-price');
       element.innerHTML = price ? str.replace(/{{price}}/, price) : str;
     }
   });
+
+  const fontSizeStyles = fontSizeMap[language as keyof typeof fontSizeMap];
+  if (fontSizeStyles) {
+    Object.entries(fontSizeStyles).forEach(([selector, size]) => {
+      document.querySelectorAll(selector).forEach((element: any) => {
+        element.style.fontSize = size;
+      });
+    });
+  }
 }
 
 function reloadLanguage () {
@@ -37,7 +53,6 @@ function reloadLanguage () {
 
 reloadLanguage();
 
-//!target on interaction
 document.getElementById("option-1")!.addEventListener("click", function() {
   const option1 = document.getElementById("option-1");
   const option2 = document.getElementById("option-2");
