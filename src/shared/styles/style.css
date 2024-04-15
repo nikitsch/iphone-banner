@@ -1,30 +1,3 @@
-@font-face {
-  font-family: "SFProDisplay-Regular";
-  src: url("./fonts/SFProDisplay-Regular.woff") format('woff');
-  font-weight: 400;
-}
-@font-face {
-  font-family: "SFProDisplay-Semibold";
-  src: url("./fonts/SFProDisplay-Semibold.woff") format('woff');
-  font-weight: 600;
-}
-@font-face {
-  font-family: "SFProDisplay-Bold";
-  src: url("./fonts/SFProDisplay-Bold.woff") format('woff');
-  font-weight: 700;
-}
-@font-face {
-  font-family: "SFProDisplay-Black";
-  src: url("./fonts/SFProDisplay-Black.woff") format('woff');
-  font-weight: 900;
-}
-
-:root {
-  --sf-reg-family: "SFProDisplay-Regular", sans-serif;
-  --sf-sem-family: "SFProDisplay-Semibold", sans-serif;
-  --sf-bold-family: "SFProDisplay-Bold", sans-serif;
-  --sf-black-family: "SFProDisplay-Black", sans-serif;
-}
 html,
 body {
   font-size: 10px;
@@ -34,17 +7,23 @@ body {
   background-image: url("../assets/img/bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  /* @media (min-resolution: 2dppx) {
-    background-image: url("../assets/img/bg@2x.webp");
-  }
-  @media (min-resolution: 3dppx) {
-    background-image: url("../assets/img/bg@3x.webp");
-  } */
   color: #ffffff;
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
+}
+
+@media (min-resolution: 2dppx) {
+  .common-wrapper {
+    background-image: url("../assets/img/bg@2x.webp");
+  }
+}
+
+@media (min-resolution: 3dppx) {
+  .common-wrapper {
+    background-image: url("../assets/img/bg@3x.webp");
+  }
 }
 
 .header {

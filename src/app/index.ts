@@ -1,5 +1,3 @@
-import '../shared/styles/reset.css'
-import '../shared/styles/style.css'
 import batteryIcon from '../shared/assets/svg/battery.svg'
 import bluetoothIcon from '../shared/assets/svg/bluetooth.svg'
 import crossIcon from '../shared/assets/svg/cross.svg'
@@ -14,6 +12,10 @@ import posterSecond3xWebp from '../shared/assets/posters/poster-2@3x.webp'
 import posterThird1xWebp from '../shared/assets/posters/poster-3.webp'
 import posterThird2xWebp from '../shared/assets/posters/poster-3@2x.webp'
 import posterThird3xWebp from '../shared/assets/posters/poster-3@3x.webp'
+
+import '../shared/styles/reset.css'
+import '../shared/styles/fonts.css'
+import '../shared/styles/style.css'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <div class="common-wrapper">
