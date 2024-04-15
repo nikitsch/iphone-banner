@@ -18,7 +18,9 @@ async function applyTranslations(language: LanguagesType) {
   document.querySelectorAll('[data-i18n]').forEach(element => {
     const key = element.getAttribute('data-i18n');
     if (key && translation[key as keyof typeof translation]) {
-      element.innerHTML = translation[key as keyof typeof translation];
+      const str = translation[key as keyof typeof translation]
+      const price = element.getAttribute('data-price')
+      element.innerHTML = price ? str.replace(/{{price}}/, price) : str;
     }
   });
 }

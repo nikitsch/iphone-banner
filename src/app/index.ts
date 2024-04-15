@@ -73,10 +73,10 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <button class="first-option-btn btn active option-btn" id="option-1" data-href="https://apple.com/">
           <div class="left-btn-align">
             <p class="btn-title" data-i18n="YEARLY ACCESS">YEARLY ACCESS</p>
-            <p class="btn-subtitle" data-i18n="Just {{price}} per year">Just $39.99 per year</p>
+            <p class="btn-subtitle" data-i18n="Just {{price}} per year" data-price="$39.99">Just $39.99 per year</p>
           </div>
           <div class="right-btn-align">
-            <p class="btn-subtitle" data-i18n="{{price}} <br>per week">$0.48 <br/>per week</p>
+            <p class="btn-subtitle" data-i18n="{{price}} <br>per week" data-price="$0.48">$0.48 <br/>per week</p>
           </div>
           <span class="btn-note" data-i18n="BEST OFFER">BEST OFFER</span>
         </button>
@@ -85,7 +85,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
             <p class="btn-title" data-i18n="WEEKLY ACCESS">WEEKLY ACCESS</p>
           </div>
           <div class="right-btn-align">
-            <p class="btn-subtitle" data-i18n="{{price}} <br>per week">$6.99 <br/>per week</p>
+            <p class="btn-subtitle" data-i18n="{{price}} <br>per week" data-price="$6.99">$6.99 <br/>per week</p>
           </div>
         </button>
         <button class="submit-btn btn" id="submit" data-i18n="Continue">Continue</button>
