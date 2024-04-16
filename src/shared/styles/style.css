@@ -1,8 +1,10 @@
 :root {
-  --sf-pro-family: 'SF Pro', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-  --sf-prodis-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-  --sf-protext-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  /* Fonts */
+  --sf-pro-family: 'SF Pro', -apple-system, BlinkMacSystemFont, Arial, serif;
+  --sf-prodis-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, Arial, serif;
+  --sf-protext-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, Arial, serif;
 
+  /* Colors */
   --white-color: #ffffff;
 }
 
@@ -10,6 +12,7 @@ html,
 body {
   font-size: 10px;
 }
+
 .common-wrapper {
   position: relative;
   background-image: url("../assets/img/bg.webp");
@@ -220,6 +223,7 @@ body {
   font-family: var(--sf-prodis-family);
   font-weight: 400;
   font-size: 1.6rem;
+  opacity: 0.7;
 }
 
 .active {
@@ -274,6 +278,7 @@ body {
   font-weight: 300;
   font-size: 1.35rem;
   line-height: 1.49rem;
+  opacity: 0.7;
   color: var(--white-color);
 }
 

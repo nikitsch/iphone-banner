@@ -3,7 +3,6 @@ import { Header } from '../widgets/header';
 import { Main } from '../widgets/main';
 
 import '../shared/styles/reset.css'
-import '../shared/styles/fonts.css'
 import '../shared/styles/style.css'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
