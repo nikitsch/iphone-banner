@@ -1,3 +1,11 @@
+:root {
+  --sf-pro-family: 'SF Pro', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  --sf-prodis-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  --sf-protext-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+
+  --white-color: #ffffff;
+}
+
 html,
 body {
   font-size: 10px;
@@ -7,7 +15,7 @@ body {
   background-image: url("../assets/img/bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  color: #ffffff;
+  color: var(--white-color);
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -43,7 +51,7 @@ body {
 }
 
 .left-time {
-  font-family: var(--sf-sem-family);
+  font-family: var(--sf-prodis-family);
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 1.8rem;
@@ -63,7 +71,7 @@ body {
   width: 36.4rem;
   height: 1.5rem;
   margin: auto;
-  font-family: var(--sf-reg-family);
+  font-family: var(--sf-protext-family);
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 1.43rem;
@@ -132,7 +140,7 @@ body {
 
 .main-title {
   margin-top: 7rem;
-  font-family: var(--sf-black-family);
+  font-family: var(--sf-pro-family);
   font-weight: 900;
   font-size: 4rem;
   line-height: 115%;
@@ -163,7 +171,7 @@ body {
   left: 0;
   width: 93%;
   padding: 1.2rem 0.7rem;
-  font-family: var(--sf-reg-family);
+  font-family: var(--sf-pro-family);
   font-size: 1.25rem;
   font-weight: 400;
   z-index: 2;
@@ -190,7 +198,7 @@ body {
   align-items: center;
   text-align: left;
   background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  color: var(--white-color);
   line-height: 1.9rem;
   transition: background-color 0.3s ease-in-out, outline 0.3s ease-in-out;
 }
@@ -204,19 +212,19 @@ body {
 }
 
 .btn-title {
-  font-family: var(--sf-sem-family);
+  font-family: var(--sf-prodis-family);
   font-weight: 600;
   font-size: 1.6rem;
 }
 .btn-subtitle {
-  font-family: var(--sf-reg-family);
+  font-family: var(--sf-prodis-family);
   font-weight: 400;
   font-size: 1.6rem;
 }
 
 .active {
   background: rgba(255, 255, 255, 0.3);
-  outline: 0.1rem solid #ffffff;
+  outline: 0.1rem solid var(--white-color);
 }
 
 .btn-note {
@@ -232,13 +240,13 @@ body {
   line-height: 1.5rem;
   font-weight: 700;
   border-radius: 1rem;
-  background-color: #ffffff;
+  background-color: var(--white-color);
   color: #000000;
   z-index: 3;
 }
 
 .submit-btn {
-  font-family: var(--sf-sem-family);
+  font-family: var(--sf-pro-family);
   font-weight: 590;
   font-size: 2.1rem;
   line-height: 120%;
@@ -262,11 +270,11 @@ body {
 }
 
 .nav-link {
-  font-family: var(--sf-reg-family);
+  font-family: var(--sf-prodis-family);
   font-weight: 300;
   font-size: 1.35rem;
   line-height: 1.49rem;
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 .swipe-bar {
@@ -276,7 +284,7 @@ body {
   border-radius: 10rem;
   width: 13.4rem;
   height: 0.5rem;
-  background-color: #ffffff;
+  background-color: var(--white-color);
 }
 
 
